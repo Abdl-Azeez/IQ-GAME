@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Quiz</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+PicaSC|bungee+shade|Metal+Mania|faster+one|Vollkorn|Righteous|Acme|fredericka+the+great|Bungee+Inline|Ewert" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<script src="question.js"></script>
+
+</head>
+<body>
+  <div>
+    <div class="logo-text animated zoomInDown">
+        <h1><a href="index.html">S <span>TESTING</span></a></h1>
+    </div>
+  </div>
+
+	<div id="quizContainer" class= "container-cp">
+		<div class="title">software Testing</div>
+		<hr style="margin-top: 20px; margin-bottom: 10px;">
+		<p id="demo"></p>
+
+		<img src="mark.png" id="mark" class="mark" style="display:none;"/>
+
+		<img src="red-cross-mark.png" id="cross" class="cross" style="display:none;"/>
+		<div id="question" class="question"></div>
+		<div id="option">
+			<label class="options"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+			<label class="options"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+			<label class="options"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+			<label class="options"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+		</div>
+
+
+		<button id="popup" class="popup" onclick="showPopUp();">Proceed
+					<span class="popuptext show" id="myPopup" style="display:none"></span>
+					<button id="nextButton" class="next-btn" style="display:none;"  onclick="loadNextQuestion();">Next Question >>></button>
+		</button>
+	</div>
+	<ol style="margin-left: 200px;  display:none;" id="AllQuestions">
+		<li>
+			<div id="q1" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt1a"></span></dl>
+					<dl class="options-display"><span id="opt1b"></span></dl>
+					<dl class="options-display"><span id="opt1c"></span></dl>
+					<dl class="options-display"><span id="opt1d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link1" style="margin:40px;" target="_blank"></a
+					<img src="mark.png" id="correct" style="display:none;"/>
+					<img src="red-cross-mark.png" id="Notcorrect" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q2" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt2a"></span></dl>
+					<dl class="options-display"><span id="opt2b"></span></dl>
+					<dl class="options-display"><span id="opt2c"></span></dl>
+					<dl class="options-display"><span id="opt2d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link2" style="margin:40px;" target="_blank"></a
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q3" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt3a"></span></dl>
+					<dl class="options-display"><span id="opt3b"></span></dl>
+					<dl class="options-display"><span id="opt3c"></span></dl>
+					<dl class="options-display"><span id="opt3d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link3" style="margin:40px;" target="_blank"></a
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q4" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt4a"></span></dl>
+					<dl class="options-display"><span id="opt4b"></span></dl>
+					<dl class="options-display"><span id="opt4c"></span></dl>
+					<dl class="options-display"><span id="opt4d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link4" style="margin:40px;" target="_blank"></a
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q5" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt5a"></span></dl>
+					<dl class="options-display"><span id="opt5b"></span></dl>
+					<dl class="options-display"><span id="opt5c"></span></dl>
+					<dl class="options-display"><span id="opt5d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link5" style="margin:40px;" target="_blank"></a
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q6" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt6a"></span></dl>
+					<dl class="options-display"><span id="opt6b"></span></dl>
+					<dl class="options-display"><span id="opt6c"></span></dl>
+					<dl class="options-display"><span id="opt6d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link6" style="margin:40px;" target="_blank"></a
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q7" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt7a"></span></dl>
+					<dl class="options-display"><span id="opt7b"></span></dl>
+					<dl class="options-display"><span id="opt7c"></span></dl>
+					<dl class="options-display"><span id="opt7d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link7" style="margin:40px;" target="_blank"></a
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q8" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt8a"></span></dl>
+					<dl class="options-display"><span id="opt8b"></span></dl>
+					<dl class="options-display"><span id="opt8c"></span></dl>
+					<dl class="options-display"><span id="opt8d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link8" style="margin:40px;" target="_blank"></a
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q9" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt9a"></span></dl>
+					<dl class="options-display"><span id="opt9b"></span></dl>
+					<dl class="options-display"><span id="opt9c"></span></dl>
+					<dl class="options-display"><span id="opt9d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link9" style="margin:40px;" target="_blank"></a
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q10" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt10a"></span></dl>
+					<dl class="options-display"><span id="opt10b"></span></dl>
+					<dl class="options-display"><span id="opt10c"></span></dl>
+					<dl class="options-display"><span id="opt10d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link10" style="margin:40px;" target="_blank"><a>
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q11" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt11a"></span></dl>
+					<dl class="options-display"><span id="opt11b"></span></dl>
+					<dl class="options-display"><span id="opt11c"></span></dl>
+					<dl class="options-display"><span id="opt11d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link11" style="margin:40px;" target="_blank"><a>
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q12" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt12a"></span></dl>
+					<dl class="options-display"><span id="opt12b"></span></dl>
+					<dl class="options-display"><span id="opt12c"></span></dl>
+					<dl class="options-display"><span id="opt12d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link12" style="margin:40px;" target="_blank"><a>
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q13" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt13a"></span></dl>
+					<dl class="options-display"><span id="opt13b"></span></dl>
+					<dl class="options-display"><span id="opt13c"></span></dl>
+					<dl class="options-display"><span id="opt13d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link13" style="margin:40px;" target="_blank"><a>
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q14" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt14a"></span></dl>
+					<dl class="options-display"><span id="opt14b"></span></dl>
+					<dl class="options-display"><span id="opt14c"></span></dl>
+					<dl class="options-display"><span id="opt14d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link14" style="margin:40px;" target="_blank"><a>
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+		<hr class="hr-display">
+		<li>
+			<div id="q15" class="question-display"></div>
+			<div style="display: flex;">
+				<div style="flex-flow: row;">
+					<dl class="options-display"><span id="opt15a"></span></dl>
+					<dl class="options-display"><span id="opt15b"></span></dl>
+					<dl class="options-display"><span id="opt15c"></span></dl>
+					<dl class="options-display"><span id="opt15d"></span></dl>
+				</div>
+				<div class="Answer">
+					<p>CLICK THE LINK BELOW FOR EXPLANATION</p>
+					<a href="" id="Link15" style="margin:40px;" target="_blank"><a>
+					<img src="mark.png" style="display:none;"/>
+					<img src="red-cross-mark.png" style="display:none;"/>
+				</div>
+			</div>
+		</li>
+	</ol>
+	<div id="Congrat" style="display: none">
+		<img src="Congrat-Emoji.png" style="height:180px; margin-left: 40pc;" >
+	</div>
+	<div id="Retry" class="RetryComment" style="display: none;">
+		<p>
+			Opps!!! You didn't score up to 50% please go through the answer and try again.
+		</p>
+		<img src="Retry-Emoji.png" style="height:180px; margin: 20px;" >
+	</div>
+	<div id="result" class="container-c result" style="display: none;">
+	</div>
+
+	<div id="progress" style="display: none;">
+			<progress id="progressbar" value="" max="100"></progress>
+			<span id="progress-value" class="progress-value"></span>
+	</div>
+	<div>
+		<a href="new.html">
+			<button id="Retrybtn" class="btn" style="display: none;"> Retry</button>
+		</a>
+		<a href="index.html">
+			<button id="Retrybttn" class="bttn" style="display: none;"> Back to Home</button>
+		</a>
+		<button id="DisplayQuestions" class="bttn" style="display: none;" onclick="displayQuestions();"> See Explanations</button>
+	</div>
+	<footer class="footer-style" id="footer-style">
+    	<p> &copy;  Copyright 2018 - All Rights Reserved</p>
+  	</footer>
+	<script src="quiz-script.js"></script>
+
+</body>
+</html>
